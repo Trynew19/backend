@@ -11,11 +11,7 @@ const MONGO_URL = process.env.MONGO_URL;
 
 
 
-app.use(cors({
-  origin: allowedOrigins,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
-}));
+app.use(cors());
 
 app.use(helmet());
 app.use(express.json());
